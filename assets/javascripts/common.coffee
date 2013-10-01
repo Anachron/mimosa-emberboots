@@ -20,6 +20,6 @@ requirejs.config
 		ember: "vendor/ember/1.0.0/ember"
 		bootstrap: "vendor/bootstrap/3.0.0/bootstrap"
 	
-  hbs:
-    disableI18n: true
-    templateExtension: "html"
+	hbs:
+		disableI18n: true
+		templateExtension: "html"
