@@ -2,8 +2,8 @@ define [
 	'views/core'
 	'controllers/core'
 	'app/router'
-	'routes/index'
-	], (CoreView, CoreController, Router, IndexRoute) ->
+	'routes/default'
+	], (CoreView, CoreController, Router, DefaultRoute) ->
 	
 	#setup
 	#link
@@ -11,6 +11,6 @@ define [
 		CoreView: CoreView
 		CoreController: CoreController
 		Router: Router
-		IndexRoute: IndexRoute
+		DefaultRoute: DefaultRoute
 	
 	App

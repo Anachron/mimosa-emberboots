@@ -1,4 +1,66 @@
 extends layout
 
+block header
+	include partials/head
+
 block content
-	p Welcome to Mimosa
+	div#content.container
+		div.jumbotron
+			h1
+				| Mimosa-Emberboots
+			p
+				| Check below for more information.
+		div.row
+			div.col-6.col-sm-6.col-lg-4
+				h2
+					i.icon-cog.icon-fixed-width
+					| Ember
+				p
+					| Using the latest technology for best development, this module is using 
+					a(href="http://www.emberjs.com", target="_blank") EmberJS 
+					under the hood to be flexible enough for your needs.
+			div.col-6.col-sm-6.col-lg-4
+				h2
+					i.icon-twitter.icon-fixed-width
+					| Bootstrap
+				p
+					| Using the latest version of 
+					a(href="http://getbootstrap.com", target="_blank") Twitter Bootstrap 
+					| your application will be loaded with great styles from the beginning!
+			div.col-6.col-sm-6.col-lg-4
+				h2
+					i.icon-flag.icon-fixed-width
+					| Font-Awesome
+				p
+					| Scaled icons everywhere with 
+					a(href="http://fortawesome.github.io/Font-Awesome", target="_blank") Font Awesome
+					|. No more icon sprites or styling issues!
+		div.row
+			div.col-6.col-sm-6.col-lg-4
+				h2
+					i.icon-leaf.icon-fixed-width
+					| Mimosa
+				p
+					| This module is a 
+					a(href="http://mimosa.io", target="_blank") Mimosa 
+					| skeleton. If you have troubles understanding or setting it up,
+					| go and take a look there!
+			div.col-6.col-sm-6.col-lg-4
+				h2
+					i.icon-code.icon-fixed-width
+					| Emblem
+				p
+					| Using the 
+					a(href="http://emblemjs.com", target="_blank") Emblem 
+					| template language on th client. 
+					| No mess with objects, use blocks and includes.
+			div.col-6.col-sm-6.col-lg-4
+				h2
+					i.icon-exchange.icon-fixed-width
+					| Express
+				p
+					a(href="http://expressjs.com/", target="_blank") Express 
+					| is used to provide a strong, well maintained and documented middleware.
+
+block footer
+	div#footer
