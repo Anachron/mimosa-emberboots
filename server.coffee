@@ -1,7 +1,9 @@
-express =        require 'express'
-engines =        require 'consolidate'
+express	=	require 'express'
+engines	=	require 'consolidate'
 
-routes  =        require './routes'
+routes	=	require './routes'
+about	=	require './routes/about'
+contact	=	require './routes/contact'
 
 exports.startServer = (config, callback) ->
 
@@ -27,6 +29,8 @@ exports.startServer = (config, callback) ->
     app.use express.errorHandler()
 
   app.get '/', routes.index(config)
+  app.get '/about', about.about(config)
+  app.get '/contact', contact.contact(config)
 
   callback(server)
 

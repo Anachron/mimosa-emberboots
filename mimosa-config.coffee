@@ -20,7 +20,7 @@ exports.config = {
   'mimosa-' that preceeds all Mimosa module names is assumed, however you can use it if you
   want. If a module is listed here that Mimosa is unaware of, Mimosa will attempt to install it.
   ###
-  # modules: ['lint', 'server', 'require', 'minify', 'live-reload', 'bower']
+  modules: ['lint', 'server', 'require', 'minify', 'live-reload', 'bower', 'server-reload']
 
   # watch:
     # sourceDir: "assets"                # directory location of web assets, can be relative to
@@ -208,6 +208,11 @@ exports.config = {
                                  # relative. If defaultServer.enabled is true, it is relative to the
                                  # root of the project. If defaultServer.enabled is false it is
                                  # relative to the server.path setting above.	
+
+  serverReload:
+    watch: ["server.coffee", "server.js", "server.ls", "server.iced", "routes", "src", "lib"]
+    exclude: []
+    validate: true
 
   # minify:                     # Configuration for non-require minification/compression via
                                 # uglify using the --minify flag.
