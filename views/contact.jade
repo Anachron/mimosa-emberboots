@@ -1,11 +1,11 @@
-extends layout
+extends layouts/default
 
 block header
-	include partials/head
+	include blocks/head
 
 block content
-	div#content.container
+	div.content.container
 		h2 Contact
 
 block footer
-	div#footer
+	include blocks/foot

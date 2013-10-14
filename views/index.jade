@@ -1,10 +1,10 @@
-extends layout
+extends layouts/default
 
 block header
-	include partials/head
+	include blocks/head
 
 block content
-	div#content.container
+	div.content.container
 		div.jumbotron
 			h1
 				| Mimosa-Emberboots
@@ -63,4 +63,4 @@ block content
 					| is used to provide a strong, well maintained and documented middleware.
 
 block footer
-	div#footer
+	include blocks/foot
