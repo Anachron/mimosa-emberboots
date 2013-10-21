@@ -20,7 +20,7 @@ exports.config = {
   'mimosa-' that preceeds all Mimosa module names is assumed, however you can use it if you
   want. If a module is listed here that Mimosa is unaware of, Mimosa will attempt to install it.
   ###
-  modules: ['lint', 'server', 'require', 'minify', 'live-reload', 'bower', 'server-reload']
+  modules: ['lint', 'server', 'require', 'minify', 'live-reload', 'bower', 'server-reload', 'post-hook']
 
   # watch:
     # sourceDir: "assets"                # directory location of web assets, can be relative to
@@ -364,5 +364,11 @@ exports.config = {
                                   # ['js', 'lib'] the output path would have "lib" and "js"
                                   # stripped. Feel free to suggest additions to this based on
                                   # your experience!
+
+  #postHook:
+    #commands: [{
+      #persistent: true
+      #command: "npm config get proxy"
+    #}]
 
 }
