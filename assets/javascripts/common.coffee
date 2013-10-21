@@ -17,7 +17,7 @@ requirejs.config
 		#libs
 		jquery: "vendor/jquery/2.0.3/jquery"
 		handlebars: "vendor/handlebars/1.0.0/handlebars"
-		ember: "vendor/ember/1.0.0/ember"
+		ember: "vendor/ember/1.1.0_beta4/ember"
 		bootstrap: "vendor/bootstrap/3.0.0/bootstrap"
 	
 	hbs:
