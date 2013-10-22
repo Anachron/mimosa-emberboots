@@ -1,10 +1,6 @@
 express	=	require 'express'
 engines	=	require 'consolidate'
 
-routes	=	require './routes'
-about	=	require './routes/about'
-contact	=	require './routes/contact'
-
 exports.startServer = (config, callback) ->
 
   port = process.env.PORT or config.server.port
@@ -28,9 +24,17 @@ exports.startServer = (config, callback) ->
   app.configure 'development', ->
     app.use express.errorHandler()
 
-  app.get '/', routes.index(config)
-  app.get '/about', about.about(config)
-  app.get '/contact', contact.contact(config)
+  options =
+    reload:    config.liveReload.enabled
+    optimize:  config.isOptimize ? false
+    cachebust: if process.env.NODE_ENV isnt "production" then "?b=#{(new Date()).getTime()}" else ''
+
+  app.get '/', (req, res)->
+    options.page = 'index'
+    res.render options.page, options
+
+  app.get '/:page', (req, res)->
+    options.page = req.params.page
+    res.render options.page, options
 
   callback(server)
-

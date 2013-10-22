@@ -1,22 +1,14 @@
 doctype 5
 html
 	head
-		title Mimosa
-		link(rel='stylesheet', href='/stylesheets/vendor/bootstrap/3.0.0/bootstrap.css' + cachebust)
-		link(rel='stylesheet', href='/stylesheets/vendor/font-awesome/3.2.1/font-awesome.css' + cachebust)
-		link(rel='stylesheet', href='/stylesheets/app.css' + cachebust)
-
-	if reload
-		script(src='/socket.io/socket.io.js')
-		script(src='/javascripts/reload-client.js')
-
-	if optimize
-		script(src='/javascripts/main-built.js')
-	else
-		script(src='/javascripts/vendor/require/2.1.8/require.js', data-main='/javascripts/main.js')
+		block head
+			block title
+			include ../blocks/info
+			include ../blocks/styles
+			include ../blocks/scripts
 
 	body
 		div.wrap
-			block header
+			block nav
 			block content
-		block footer
+		block foot

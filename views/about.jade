@@ -1,7 +1,10 @@
 extends layouts/default
 
-block header
-	include blocks/head
+block title
+	title Mimosa &rsaquo; #{page}
+
+block nav
+	include blocks/nav
 
 block content
 	div.content.container
@@ -10,5 +13,5 @@ block content
 			small by 
 			b AuthorName
 
-block footer
+block foot
 	include blocks/foot

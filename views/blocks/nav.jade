@@ -8,11 +8,11 @@ div.header.navbar.navbar-inverse.navbar-fixed-top
 			a.navbar-brand My Project
 		div.navbar-collapse.collapse
 			ul.nav.navbar-nav
-				li.active
+				li(class="#{page=='index' ? 'active' : ''}")
 					a(href="/") Home
-				li
+				li(class="#{page=='about' ? 'active' : ''}")
 					a(href="/about") About
-				li
+				li(class="#{page=='contact' ? 'active' : ''}")
 					a(href="/contact") Contact
 			div.navbar-form.navbar-right
 				div.form-group

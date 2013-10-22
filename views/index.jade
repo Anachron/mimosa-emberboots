@@ -1,7 +1,10 @@
 extends layouts/default
 
-block header
-	include blocks/head
+block title
+	title Mimosa &rsaquo; #{page}
+
+block nav
+	include blocks/nav
 
 block content
 	div.content.container
@@ -62,5 +65,5 @@ block content
 					a(href="http://expressjs.com/", target="_blank") Express 
 					| is used to provide a strong, well maintained and documented middleware.
 
-block footer
+block foot
 	include blocks/foot

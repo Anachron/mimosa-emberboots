@@ -1,0 +1,8 @@
+if reload
+	script(src='/socket.io/socket.io.js')
+	script(src='/javascripts/reload-client.js')
+
+if optimize
+	script(src='/javascripts/main-built.js')
+else
+	script(src='/javascripts/vendor/require/2.1.8/require.js', data-main='/javascripts/main.js')

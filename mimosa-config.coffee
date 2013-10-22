@@ -368,7 +368,7 @@ exports.config = {
   #postHook:
     #commands: [{
       #persistent: true
-      #command: "npm config get proxy"
+      #command: "ngrok.exe -config ..\..\ngrok\.ngrok start"
     #}]
 
 }

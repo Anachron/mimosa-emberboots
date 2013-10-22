@@ -1,11 +1,14 @@
 extends layouts/default
 
-block header
-	include blocks/head
+block title
+	title Mimosa &rsaquo; #{page}
+
+block nav
+	include blocks/nav
 
 block content
 	div.content.container
 		h2 Contact
 
-block footer
+block foot
 	include blocks/foot
